@@ -1,0 +1,50 @@
+* connect to EC2 instance
+
+  > ssh -i <key pair file name> ubuntu@<public ip>
+
+* configure EC2 instance 
+
+> sudo apt-get update
+
+* install mysql
+> sudo apt-get install mysql-server mysql-client
+
+
+* configure mysql
+
+> sudo mysql
+> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+> FLUSH PRIVILEGES;
+
+
+* install nodejs
+
+> sudo apt install nodejs
+
+
+* copy server code 
+
+[from your machine execute the commands]
+> scp -i <key-pair file name> <file name> ubuntu@<public ip>:~/
+> scp -i ~/Downloads/my_key_pair.pem server.zip ubuntu@13.235.23.20:~/
+
+[on your cloud machine execute the commands]
+> sudo apt-get install unzip
+> unzip server.zip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

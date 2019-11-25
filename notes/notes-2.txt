@@ -1,0 +1,14 @@
+* Inflate xml file
+- read the file
+- understand the structure
+- create objects for every xml element in the file
+- build view object hierarchy 
+- return object of root element
+
+
+* to get the context
+- activity => this
+- service  => getApplicationContext()
+- broadcast receiver => context as parameter of onReceive()
+- content provider => getContext()
+- fragment => getActivity()
